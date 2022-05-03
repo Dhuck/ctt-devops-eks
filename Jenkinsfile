@@ -80,6 +80,11 @@ pipeline {
                 sh 'kubectl apply -f https://raw.githubusercontent.com/arrsvjes/ctt-devops-eks/main/jenkins.yaml'
             }
         }
+        stage('deploygitlab') {
+            steps {
+                sh 'kubectl apply -f https://raw.githubusercontent.com/Dhuck/ctt-devops-eks/main/gitlab.yaml'
+            }
+        }
         stage('deploynexus') { 
             steps { 
                 sh 'kubectl apply -f https://raw.githubusercontent.com/arrsvjes/ctt-devops-eks/main/nexus-repository.yaml'
