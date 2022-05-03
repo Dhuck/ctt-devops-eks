@@ -56,5 +56,5 @@ spec:
               service:
                 name: gitlab
                 port:
-                  number: 8080
+                  number: 80
 
